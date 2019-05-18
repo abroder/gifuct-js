@@ -4,7 +4,8 @@
   "description": "Easy to use efficient .GIF parsing in the browser",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "node -e \"try { require('fs').symlinkSync(require('path').resolve('node_modules/@bower_components'), 'bower_components', 'junction') } catch (e) { }\""
   },
   "repository": {
     "type": "git",
@@ -29,5 +30,11 @@
     "gulp-uglify": "^1.2.0",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0"
+  },
+  "dependencies": {
+    "@bower_components/js-binary-schema-parser": "matt-way/jsBinarySchemaParser#~1.0.0"
+  },
+  "engines": {
+    "yarn": ">= 1.0.0"
   }
 }
